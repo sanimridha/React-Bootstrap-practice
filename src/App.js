@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Alert, Badge, Button, Col, Row } from "react-bootstrap";
+import { Alert, Badge, Button, Card, Col, Row } from "react-bootstrap";
 import { useState } from "react";
 
 function App() {
@@ -78,6 +78,34 @@ function App() {
                         Example heading <Badge bg="secondary">New</Badge>
                     </h6>
                 </div>
+                <Button variant="primary">
+                    Profile <Badge bg="secondary">9</Badge>
+                    <span className="visually-hidden">unread messages</span>
+                </Button>
+                <div>
+                    <Badge bg="primary">Primary</Badge>{" "}
+                    <Badge bg="secondary">Secondary</Badge>{" "}
+                    <Badge bg="success">Success</Badge>{" "}
+                    <Badge bg="danger">Danger</Badge>{" "}
+                    <Badge bg="warning" text="dark">
+                        Warning
+                    </Badge>{" "}
+                    <Badge bg="info">Info</Badge>{" "}
+                    <Badge bg="light" text="dark">
+                        Light
+                    </Badge>{" "}
+                    <Badge bg="dark">Dark</Badge>
+                </div>
+                <>
+                    <Button variant="outline-primary">Primary</Button>{" "}
+                    <Button variant="outline-secondary">Secondary</Button>{" "}
+                    <Button variant="outline-success">Success</Button>{" "}
+                    <Button variant="outline-warning">Warning</Button>{" "}
+                    <Button variant="outline-danger">Danger</Button>{" "}
+                    <Button variant="outline-info">Info</Button>{" "}
+                    <Button variant="outline-light">Light</Button>{" "}
+                    <Button variant="outline-dark">Dark</Button>
+                </>
                 {[
                     "primary",
                     "secondary",
@@ -107,6 +135,18 @@ function App() {
                     </p>
                 </Alert>
                 <AlertDismissibleExample />
+                <Card className="text-center">
+                    <Card.Header>Featured</Card.Header>
+                    <Card.Body>
+                        <Card.Title>Special title treatment</Card.Title>
+                        <Card.Text>
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                        </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                </Card>
             </header>
         </div>
     );
