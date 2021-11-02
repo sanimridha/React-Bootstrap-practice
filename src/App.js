@@ -10,8 +10,12 @@ import {
     Col,
     Form,
     Modal,
+    OverlayTrigger,
     Placeholder,
+    Popover,
     Row,
+    ProgressBar,
+    Spinner,
 } from "react-bootstrap";
 import { useState } from "react";
 import NavbarComponent from "./NavbarComponent";
@@ -110,6 +114,59 @@ function App() {
                     </Card.Body>
                 </Card>
             </div>
+            <>
+                <Placeholder xs={12} />
+
+                <Placeholder xs={12} bg="primary" />
+                <Placeholder xs={12} bg="secondary" />
+                <Placeholder xs={12} bg="success" />
+                <Placeholder xs={12} bg="danger" />
+                <Placeholder xs={12} bg="warning" />
+                <Placeholder xs={12} bg="info" />
+                <Placeholder xs={12} bg="light" />
+                <Placeholder xs={12} bg="dark" />
+            </>
+            <>
+                {["top", "right", "bottom", "left"].map(placement => (
+                    <OverlayTrigger
+                        trigger="click"
+                        key={placement}
+                        placement={placement}
+                        overlay={
+                            <Popover id={`popover-positioned-${placement}`}>
+                                <Popover.Header as="h3">{`Popover ${placement}`}</Popover.Header>
+                                <Popover.Body>
+                                    <strong>Holy guacamole!</strong> Check this
+                                    info.
+                                </Popover.Body>
+                            </Popover>
+                        }
+                    >
+                        <Button variant="secondary">
+                            Popover on {placement}
+                        </Button>
+                    </OverlayTrigger>
+                ))}
+            </>
+            <ProgressBar animated now={45} />
+            <>
+                <Spinner animation="border" variant="primary" />
+                <Spinner animation="border" variant="secondary" />
+                <Spinner animation="border" variant="success" />
+                <Spinner animation="border" variant="danger" />
+                <Spinner animation="border" variant="warning" />
+                <Spinner animation="border" variant="info" />
+                <Spinner animation="border" variant="light" />
+                <Spinner animation="border" variant="dark" />
+                <Spinner animation="grow" variant="primary" />
+                <Spinner animation="grow" variant="secondary" />
+                <Spinner animation="grow" variant="success" />
+                <Spinner animation="grow" variant="danger" />
+                <Spinner animation="grow" variant="warning" />
+                <Spinner animation="grow" variant="info" />
+                <Spinner animation="grow" variant="light" />
+                <Spinner animation="grow" variant="dark" />
+            </>
             <div className="App">
                 <header className="App-header">
                     <Carousel>
