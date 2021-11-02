@@ -1,6 +1,15 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Alert, Badge, Button, Card, Col, Row } from "react-bootstrap";
+import {
+    Alert,
+    Badge,
+    Button,
+    Card,
+    Carousel,
+    Col,
+    Form,
+    Row,
+} from "react-bootstrap";
 import { useState } from "react";
 
 function App() {
@@ -35,18 +44,52 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://images.unsplash.com/photo-1635840030615-8a89829e4cd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>
+                                Nulla vitae elit libero, a pharetra augue mollis
+                                interdum.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://images.unsplash.com/photo-1635840030615-8a89829e4cd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+                            alt="Second slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://images.unsplash.com/photo-1635840030615-8a89829e4cd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>
+                                Praesent commodo cursus magna, vel scelerisque
+                                nisl consectetur.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
                 <Row className="mx-0">
                     <Button as={Col} variant="primary">
                         Button #1
@@ -105,6 +148,17 @@ function App() {
                     <Button variant="outline-info">Info</Button>{" "}
                     <Button variant="outline-light">Light</Button>{" "}
                     <Button variant="outline-dark">Dark</Button>
+                </>
+                <>
+                    <Form.Label htmlFor="exampleColorInput">
+                        Color picker
+                    </Form.Label>
+                    <Form.Control
+                        type="color"
+                        id="exampleColorInput"
+                        defaultValue="#563d7c"
+                        title="Choose your color"
+                    />
                 </>
                 {[
                     "primary",
